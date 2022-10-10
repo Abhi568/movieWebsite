@@ -6,7 +6,6 @@ import "./../App";
 import modeImage from "./../Images/dark-light-mode-png.png";
 
 export default function Navbar() {
-
   const [dataForCurrentPage, setDataForCurrentPage] = useState([]);
   const [originalData, setOriginalData] = useState([]);
   const [error, setError] = useState(null);
@@ -70,7 +69,7 @@ export default function Navbar() {
     }
   };
   const goToNextPage = () => {
-    setSelectValue('None')
+    setSelectValue("None");
     setIsLoaded(false);
     setQ("");
     fetch(`https://movie-task.vercel.app/api/popular?page=${pageNumber + 1}`)
@@ -90,7 +89,7 @@ export default function Navbar() {
   };
 
   const goToPreviousPage = () => {
-    setSelectValue('None')
+    setSelectValue("None");
     setIsLoaded(false);
     setQ("");
     fetch(`https://movie-task.vercel.app/api/popular?page=${pageNumber - 1}`)
@@ -110,40 +109,38 @@ export default function Navbar() {
   };
 
   const searchByTitle = (event) => {
-    
-    setSelectValue('None')
+    setSelectValue("None");
     setQ(event.target.value);
-    if (error === null){
-    if (document.getElementById("f2").value !== null) {
-      let { results } = originalData;
-      let filteredData = results.filter((ele) => {
-        return ele.original_title
-          .toLowerCase()
-          .includes(document.getElementById("f2").value.toLowerCase());
-      });
-      dataForCurrentPage.results = filteredData;
+    if (error === null) {
+      if (document.getElementById("f2").value !== null) {
+        let { results } = originalData;
+        let filteredData = results.filter((ele) => {
+          return ele.original_title
+            .toLowerCase()
+            .includes(document.getElementById("f2").value.toLowerCase());
+        });
+        dataForCurrentPage.results = filteredData;
+      }
     }
-  }
   };
   const selectByYear = (year) => {
     setQ("");
-    console.log(year.target.value!== 'None')
-    if (year.target.value!== 'None'){
-    setSelectValue(year.target.value);
-    let { results } = originalData;
-    let filteredData = results.filter((ele) => {
-      return (
-        new Date(ele.release_date).getFullYear().toString() ===
-        year.target.value
-      );
-    });
-    dataForCurrentPage.results = filteredData;
-    setDataForCurrentPage(dataForCurrentPage);
-  }
-  else{
-    setSelectValue('None')
-    setDataForCurrentPage(JSON.parse(JSON.stringify(originalData)))
-  }
+    console.log(year.target.value !== "None");
+    if (year.target.value !== "None") {
+      setSelectValue(year.target.value);
+      let { results } = originalData;
+      let filteredData = results.filter((ele) => {
+        return (
+          new Date(ele.release_date).getFullYear().toString() ===
+          year.target.value
+        );
+      });
+      dataForCurrentPage.results = filteredData;
+      setDataForCurrentPage(dataForCurrentPage);
+    } else {
+      setSelectValue("None");
+      setDataForCurrentPage(JSON.parse(JSON.stringify(originalData)));
+    }
   };
 
   return (
@@ -156,7 +153,9 @@ export default function Navbar() {
           <div className="d-flex">
             <button
               className="navbar-toggler"
-              style={{backgroundColor : mode.color === 'white' ? 'white' : '#c1baba'}}
+              style={{
+                backgroundColor: mode.color === "white" ? "white" : "#c1baba",
+              }}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent"
@@ -226,7 +225,7 @@ export default function Navbar() {
             </ul>
             <div className="d-flex justify-content-center block;">
               <input
-                style={{width:'20rem', ...backgroundMode}}
+                style={{ width: "20rem", ...backgroundMode }}
                 className="form-control mx-2 my-2"
                 type="search"
                 placeholder="Search By Title"
@@ -263,7 +262,7 @@ export default function Navbar() {
           </button>
           <button
             type="button"
-            className= {
+            className={
               mode.color === "black"
                 ? "btn btn-outline-primary"
                 : "btn btn-dark"
