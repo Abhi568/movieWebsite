@@ -110,8 +110,10 @@ export default function Navbar() {
   };
 
   const searchByTitle = (event) => {
+    
     setSelectValue('None')
     setQ(event.target.value);
+    if (error === null){
     if (document.getElementById("f2").value !== null) {
       let { results } = originalData;
       let filteredData = results.filter((ele) => {
@@ -121,6 +123,7 @@ export default function Navbar() {
       });
       dataForCurrentPage.results = filteredData;
     }
+  }
   };
   const selectByYear = (year) => {
     setQ("");
