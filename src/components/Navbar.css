@@ -1,0 +1,23 @@
+.navbar {
+  border-bottom: 1px solid #c2bfb7;
+}
+
+.navbar-brand,
+.navbar-brand:hover,
+.pagination .page-item {
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: brown !important;
+}
+
+.navbar-nav .nav-link {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.dropdown-items {
+  font-size: 1.2rem;
+}
