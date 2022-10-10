@@ -153,6 +153,7 @@ export default function Navbar() {
           <div className="d-flex">
             <button
               className="navbar-toggler"
+              style={{backgroundColor : mode.color === 'white' ? 'white' : '#c1baba'}}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent"
@@ -223,7 +224,7 @@ export default function Navbar() {
             <div className="d-flex justify-content-center block;">
               <input
                 style={{width:'20rem', ...backgroundMode}}
-                className="form-control me-2"
+                className="form-control mx-2 my-2"
                 type="search"
                 placeholder="Search By Title"
                 aria-label="Search"
@@ -259,7 +260,7 @@ export default function Navbar() {
           </button>
           <button
             type="button"
-            className={
+            className= {
               mode.color === "black"
                 ? "btn btn-outline-primary"
                 : "btn btn-dark"
