@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/movieWebsite/static/css/main.5c03f5dd.css",
-    "main.js": "/movieWebsite/static/js/main.eef8883b.js",
+    "main.css": "/movieWebsite/static/css/main.dbfb681b.css",
+    "main.js": "/movieWebsite/static/js/main.76703dd5.js",
     "static/js/787.28cb0dcd.chunk.js": "/movieWebsite/static/js/787.28cb0dcd.chunk.js",
-    "static/media/dark-light-mode-png.png": "/movieWebsite/static/media/dark-light-mode-png.4dbe62d79744e5d6f218.png",
     "index.html": "/movieWebsite/index.html",
-    "main.5c03f5dd.css.map": "/movieWebsite/static/css/main.5c03f5dd.css.map",
-    "main.eef8883b.js.map": "/movieWebsite/static/js/main.eef8883b.js.map",
+    "main.dbfb681b.css.map": "/movieWebsite/static/css/main.dbfb681b.css.map",
+    "main.76703dd5.js.map": "/movieWebsite/static/js/main.76703dd5.js.map",
     "787.28cb0dcd.chunk.js.map": "/movieWebsite/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5c03f5dd.css",
-    "static/js/main.eef8883b.js"
+    "static/css/main.dbfb681b.css",
+    "static/js/main.76703dd5.js"
   ]
 }
