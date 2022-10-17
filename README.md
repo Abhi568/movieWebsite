@@ -1,2 +1,2 @@
 # movieWebsite
-Link : https://github.com/Abhi568/movieWebsite
+Link : https://abhi568.github.io/movieWebsite/
